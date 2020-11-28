@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name-Calculator</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <script type="text/javascript" src="Name-Calc.js"></script>
+
+    <style>
+        body {
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 100px;
+        }
+        div {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>名前 計算機</h1>
+        <h6>ローマ字で入力してください</h6>
+    </header>
+
+    <!-- <form name="nyuryoku" onsubmit="CheckCalc();"> -->
+    <form name="nyuryoku">
+    <div>
+        <span>フルネーム</span>
+        <input type="text" name="myouji" placeholder="苗字・名前を入力">
+    </div>
+    <!-- <div>
+        <span>名前</span>
+        <input type="text" name="namae" placeholder="名前を入力">
+    </div> -->
+    <div>
+        <button type='button' onclick="CheckCalc()">計算開始</button>
+        <!-- <button onclick="tameshi()">計算開始</button> -->
+    </div>
+    <div id="four"></div>
+    <div id="five"></div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
