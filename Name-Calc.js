@@ -14,9 +14,21 @@ var li_moji_x;
 let cnt_FullName_Boin = 0;
 let cnt_FullName_Shiin = 0;
 var hantei = 0;
+var parent = "";
 
 function CheckCalc() {
 console.log("■■■計算開始■■■");
+
+//2度目以降のボタン押下時に、以前の要素・カウントを削除する
+if (document.querySelector('div p') != null) {
+    console.log('div-p');
+    parent = document.getElementById('four');
+    parent.removeChild(parent.firstChild);
+    parent = document.getElementById('five');
+    parent.removeChild(parent.firstChild);
+    cnt_FullName_Boin = 0;
+    cnt_FullName_Shiin = 0;
+}
 
 /* 苗字の判定 */
 if (document.nyuryoku.myouji.value == "") {
@@ -28,12 +40,12 @@ if (document.nyuryoku.myouji.value == "") {
     /* 一文字づつ抜き出し */
     for (let i = 0; i < txtFullName.length; i++) {
         hantei = 0;
-        console.log('名前のi文字目=' + (i + 1) + ':' + txtFullName[i]);
+        // console.log('名前のi文字目=' + (i + 1) + ':' + txtFullName[i]);
 
         /* リストの個数分forをまわす */
         for (let j = 1; j <= 9; j++) {
             li_moji_x = eval("li_moji_" + j);
-            console.log(li_moji_x);
+            // console.log(li_moji_x);
 
             /* リスト内要素分forをまわす(3回、１要素目は数字を取得する目的のためforの除外) */
             for (let k = 1; k <= 3; k++) {
@@ -71,7 +83,7 @@ if (document.nyuryoku.myouji.value == "") {
                 /* 抜き出し文字がリスト内要素と同じ文字である場合 */
                 if (txtFullName[i] == li_moji_x[k] && hantei != 1) {
                     cnt_FullName_Shiin += li_moji_x[0]
-                    console.log('カウント(子音)：' + cnt_FullName_Shiin);
+                    // console.log('カウント(子音)：' + cnt_FullName_Shiin);
                     hantei = 1;
                     break;
                 }
